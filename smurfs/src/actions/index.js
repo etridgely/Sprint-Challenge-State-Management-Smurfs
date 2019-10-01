@@ -9,9 +9,14 @@ export const fetchSmurf = () => dispatch => {
     axios
         .get("http://localhost:3333/smurfs")
         .then(res => {
+            console.log(res);
             dispatch({ type: FETCH_SMURF_SUCCESS, payload: res.data.id})
         })
         .catch( err=> {
-            dispatch({ type: FETCH_SMURF_FAILURE, payload: res.data.id})
+            console.log(
+                "actions/index.js: fetchSmurf: axios: catch: err",
+                err
+            );
+            dispatch({ type: FETCH_SMURF_FAILURE, payload: err.message})
         });
 };
