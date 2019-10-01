@@ -34,9 +34,9 @@ store = state tree, or data of the application.
 
 The store is known as the 'single source of truth' because it is the ledger of every state that passes through the application.  You can see all the changes within your application there.
 
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other? The difference is data scope, or where the state is stored.  In Component state it's stored in the component, whereas in the application state, the data object persists across the application.  You would never need component state extended unless it needed to be accessed in more than one place.
+- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other? 
 
-The Application State is the data state across 
+The difference is data scope, or where the state is stored.  In Component state it's stored in the component, whereas in the application state, the data object persists across the application.  You would never need component state extended unless it needed to be accessed in more than one place.
 
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 
