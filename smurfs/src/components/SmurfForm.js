@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { addSmurf } from "../actions";
 import "./App.css";
 
-const SmurfForm = addSmurf => {
+const SmurfForm = ({ addSmurf }) => {
     const [ smurf, setSmurf ] = useState({ name: "", age: "", height: "", id: Date.now() });
 
     const submitSmurf = e => {

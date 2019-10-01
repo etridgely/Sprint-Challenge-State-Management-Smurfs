@@ -21,9 +21,9 @@ export const fetchSmurf = () => dispatch => {
         });
 };
 
-export const addSmurf = smurf => dispatch => {
+export const addSmurf = newSmurf => dispatch => {
     dispatch({ type: ADD_SMURF });
-    return axios.post("http://localhost:3333/smurfs", smurf)
+    return axios.post("http://localhost:3333/smurfs", newSmurf)
         .then(res=> {
             dispatch({ type: ADD_SMURF_SUCCESS, payload: res.data });
         })
